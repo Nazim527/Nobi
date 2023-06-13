@@ -1,0 +1,46 @@
+@import '../Helper/map';
+@import '../Helper/mixin';
+
+footer {
+    padding: 24px 0;
+    width: 100%;
+
+    @include flex(space-between, center);
+    @include flex_colum(24px);
+    @include size_color(dark,fs-xsm,fw-defualt);
+
+    .sorter_line {
+        width: 100%;
+        width: 100%;
+        height: 1px;
+        background-color: map-get($colors,line-color);
+        font-weight: 700;
+    }
+
+    .footer_list ul {
+        @include flex_colum(16px);
+        text-align: center;
+    }
+}
+
+.footer_list ul a {
+    color: map-get($colors,dark);
+}
+
+//! Desktop
+
+@media screen and (min-width: 1200px) {
+    footer {
+        flex-direction: row-reverse;
+        @include flex(space-between,center);
+
+        .sorter_line {
+            display: none;
+        }
+
+        .footer_list ul {
+            @include flex_row(16px);
+        }
+    }
+
+}

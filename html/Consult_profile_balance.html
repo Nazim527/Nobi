@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/euclid-circular-a" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link rel="stylesheet" href="../CSS/Consult_profile_balance.css">
+    <title>Consult_profile_balance</title>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay"></div> <!--! Overlay open Menu active-->
+        <header id="navbar">
+            <div class="header_left">
+                <div class="logo"><img src="../IMAGE/Logo.png"></div>
+                <div class="hamburger"><!--!Menu Hamburger-->
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <!--! Menu Hamburger -->
+                <div class="menu">
+                    <ion-icon name="close" class="closes"></ion-icon> <!--? Open hamburger menu-->
+                    <div class="list">
+                        <div class="info"><ion-icon name="home-outline"></ion-icon><p>Home</p></div>
+                        <div class="info"><ion-icon name="list-outline"></ion-icon><p>Features</p></div>
+                        <div class="info"><ion-icon name="construct-outline"></ion-icon><p>Support</p></div>
+                        <div class="info"><ion-icon name="help-circle-outline"></ion-icon><p>Info</p></div>
+                    </div>
+                </div>
+                <!--! End Menu Hamburger -->
+
+                <div class="logo2"><img src="../IMAGE/View-about/Group 670.png"></div> <!--? Desktop-->
+                <div class="community">
+                    <p>Features</p>
+                    <p>Support</p>
+                </div>
+            </div>
+            <div class="header_right">
+                <form>
+                    <input id="search" type="search" placeholder="Search">
+                    <ion-icon id="search_icon" name="search-outline"></ion-icon>
+                </form>
+                <a href="#" class="btn_short">Upload</a>
+                <ion-icon name="notifications-outline"></ion-icon>
+                <div class="image" id="account_popup"><img src="../IMAGE/Balance/Profile.png"></div>
+                
+                <!--? Account Popup -->
+                <div class="profile_about" id="open_account"> <!--!Image click open popup-->
+                    <div class="profile_info">
+                        <div class="profile_header">
+                            <div class="image"><img src="../IMAGE/Balance/Profile.png"></div>
+                            <div class="account_info">
+                                <h5>Ulvin Omarov</h5>
+                                <p>UX designer</p>
+                                <div class="hight_line"></div>
+                                <ion-icon name="star-outline" style="color: #F2C94C;"></ion-icon>
+                                <p>4.7</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn_long">Upload</a>
+                        <div class="setup">
+                            <div class="info"><ion-icon name="image-outline"></ion-icon><p>My posts</p></div>
+                            <div class="info"><ion-icon name="calendar-outline"></ion-icon><p>Calendar</p></div>
+                            <div class="info"><ion-icon name="locate-outline"></ion-icon><p>Balance</p></div>
+                            <div class="info"><ion-icon name="card-outline"></ion-icon><p>Payouts</p></div>
+                            <div class="info"><ion-icon name="cog-outline"></ion-icon><p>Settings</p></div>
+                            <div class="info"><ion-icon name="log-out-outline"></ion-icon><p>Logout</p></div>
+                        </div>
+                    </div>
+                </div>
+                <!--? End Account Popup -->
+            </div>
+        </header>
+        <!--! End Header -->
+
+        <!--! Section -->
+        <section>
+
+            <!--? Account Popup -->
+            <div class="profile_about">
+                <div class="profile_info">
+                    <div class="profile_header">
+                        <div class="image"><img src="../IMAGE/Balance/Profile.png"></div>
+                        <h5>Ulvin Omarov</h5>
+                        <div class="account_info">
+                            <p>UX designer</p>
+                            <div class="hight_line"></div>
+                            <ion-icon name="star-outline" style="color: #F2C94C;"></ion-icon>
+                            <p>4.7</p>
+                        </div>
+                    </div>
+
+                    <div class="setup">
+                        <div class="info"><ion-icon name="image-outline"></ion-icon><p>My posts</p></div>
+                        <div class="info"><ion-icon name="calendar-outline"></ion-icon><p>Calendar</p></div>
+                        <div class="info"><ion-icon name="locate-outline"></ion-icon><p>Balance</p></div>
+                        <div class="info"><ion-icon name="card-outline"></ion-icon><p>Payouts</p></div>
+                        <div class="info"><ion-icon name="cog-outline"></ion-icon><p>Settings</p></div>
+                        <div class="info"><ion-icon name="log-out-outline"></ion-icon><p>Logout</p></div>
+                    </div>
+                </div>
+            </div>
+            <!--? End Account Popup -->
+
+            <main class="balance">
+                <div class="balance_header">
+                    <h2>Balance</h2>
+                    <div class="buttons">
+                        <a href="#" class="btn_short">Connect bank account</a>
+                        <a href="#" class="btn_short">Create bank account</a>
+                    </div>
+                </div>
+                <div class="balance_section">
+                    
+                    <div class="total_amount">
+                        <p>Total:  <span>1420 USD</span></p>
+                        <a href="#" class="btn_short">Withdraw now</a>
+                    </div>
+                    
+                    <h3>Balance activity</h3>
+                    
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Topic</th>
+                                    <th>Date</th>
+                                    <th>Total hour</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="warning">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="warning">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="primary">Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="primary">Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="danger">Canceled</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="primary">Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="warning">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="warning">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="primary">Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="primary">Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Patinson</td>
+                                    <td>Grow your creative busin...</td>
+                                    <td>30.04.21</td>
+                                    <td>1h 30min</td>
+                                    <td>125 USD</td>
+                                    <td class="danger">Cancaled</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    <div class="pages_number">
+                        <div class="direction_logo"><img src="../IMAGE/Balance/Group 264.png"></div>
+                        <div class="pages">
+                            <p class="number">4</p>
+                            <p class="number">5</p>
+                            <p class="number">6</p>
+                            <p class="number">...</p>
+                            <p class="number">12</p>
+                        </div>
+                        <div class="direction_logo"><img src="../IMAGE/Balance/Group 263.png"></div>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <!--! End Section -->
+
+        <!--! Footer -->
+        <footer>
+            <div class="footer_list">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="sorter_line"></div>
+            <div class="community_rule">
+                <p>2023 Nobi. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- ! End Footer -->
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

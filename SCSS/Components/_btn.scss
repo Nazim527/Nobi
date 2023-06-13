@@ -1,0 +1,24 @@
+@import '../Helper/map';
+
+.btn_long, .btn_short
+ {
+    padding: 12px 0;
+    text-align: center;
+    border: 1px solid map-get($colors,success);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+
+    @include size_color(success, fs-xsm, fw-defualt);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn_long {
+    width: 178px;
+}
+
+.btn_short {
+    width: 128px;
+}

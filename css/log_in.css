@@ -1,0 +1,302 @@
+.btn_long, .btn_short {
+  padding: 12px 0;
+  text-align: center;
+  border: 1px solid #00BBA4;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  color: #00BBA4;
+  font-size: 14px;
+  font-weight: 400;
+}
+.btn_long:hover, .btn_short:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn_long {
+  width: 178px;
+}
+
+.btn_short {
+  width: 128px;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  width: 100%;
+  height: 56px;
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .logo {
+  width: 60px;
+  height: 25px;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+header .login_query {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+}
+header .login_query a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4F4F4F;
+}
+header .login_query a:nth-child(2) {
+  color: #2D9CDB;
+}
+
+.login {
+  width: 100%;
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+}
+.login h2 {
+  color: #1A1D1C;
+  font-size: 20px;
+  font-weight: 600;
+}
+.login .login_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.login .btn_long {
+  width: 100%;
+  background-color: #00BBA4;
+  padding: 15px 0;
+  color: #FFFFFF;
+}
+.login .btn_long:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.login_form {
+  width: 100%;
+}
+.login_form .btn_login_account {
+  position: relative;
+  width: 100%;
+  padding: 17px 0;
+  background-color: #2F80ED;
+  border-radius: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.login_form .btn_login_account a {
+  color: #E6F8F7;
+  font-size: 14px;
+  font-weight: 400;
+}
+.login_form .btn_login_account .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 8px;
+}
+.login_form p {
+  text-align: center;
+  color: #828282;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.login_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.login_form form input {
+  width: 100%;
+  padding: 22px 24px;
+  background-color: #F2F2F2;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+.login_form form label {
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #828282;
+  font-size: 14px;
+  font-weight: 400;
+}
+.login_form form .email {
+  position: relative;
+}
+.login_form form .email label {
+  top: 50%;
+  left: 2.4rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.login_form form .psw {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.login_form form .psw label {
+  top: 30%;
+  left: 2.4rem;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+.login_form form .psw span ion-icon {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top: 0;
+  right: 16px;
+  padding: 19px 0;
+  cursor: pointer;
+}
+.login_form form .psw a {
+  text-align: right;
+  color: #2D9CDB;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.login_form form input:not(:-moz-placeholder-shown) {
+  border: 1px solid #2F80ED;
+}
+
+.login_form form input:not(:-ms-input-placeholder) {
+  border: 1px solid #2F80ED;
+}
+
+.login_form form input:focus,
+.login_form form input:not(:placeholder-shown) {
+  border: 1px solid #2F80ED;
+}
+
+.login_form form input:not(:-moz-placeholder-shown) + label {
+  color: dodgerblue;
+  padding: 0 5px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  left: 1rem;
+  top: 0;
+}
+
+.login_form form input:not(:-ms-input-placeholder) + label {
+  color: dodgerblue;
+  padding: 0 5px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  left: 1rem;
+  top: 0;
+}
+
+.login_form form input:focus + label,
+.login_form form input:not(:placeholder-shown) + label {
+  color: dodgerblue;
+  padding: 0 5px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  left: 1rem;
+  top: 0;
+}
+
+.login_form .psw #toggleBtn_psw .closeEye,
+.login_form .psw #toggleBtn_psw.hide .openEye {
+  display: none;
+}
+
+.login_form .psw #toggleBtn_psw.hide .closeEye {
+  display: inline-block;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo {
+    width: 92px;
+    height: 50px;
+  }
+  header .login_query a {
+    color: #1A1D1C;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    width: 400px;
+  }
+}

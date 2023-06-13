@@ -1,0 +1,280 @@
+@import '../Helper/map';
+@import '../Helper/mixin';
+@import '../Components/btn';
+@import '../Components/list_inf';
+@import '../Components/header'; //! Header
+@import '../Components/accoount'; 
+@import '../Components/footer'; //!Footer
+
+//? Mobile first
+
+html {
+    font-size: 10px;
+}
+
+//! Section
+
+section {
+    width: 100%;
+    height: 100%;
+
+    .profile_about{
+        display: none;
+    }
+
+    main {
+        @include flex_colum(22px);
+    }
+
+}
+
+.balance .balance_header {
+    @include flex_colum(24px);
+
+    h2 {
+        @include size_color(dark, fs-lg, fw-lg);
+    }
+
+    .buttons {
+        @include flex_row(16px);
+
+        .btn_short {
+            width: 175px;
+        
+            &:nth-child(1) {
+                color: map-get($colors,primary );
+                border-color: map-get($colors,primary );
+            }
+            &:nth-child(2) {
+                color: map-get($colors,light );
+                background-color: map-get($colors,primary );
+            }
+        }
+    }
+}
+
+//! Table section 
+.balance .balance_section {
+        width: 100%;
+        height: 100%;
+        padding-top: 16px;
+
+        @include flex_colum(32px);
+
+        h3 {
+            @include size_color(dark, fs-md, fw-lg);
+        }
+
+        .total_amount {
+            background: map-get($colors, success);
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+
+            @include flex(space-between,center);
+
+            p {
+                @include size_color(light, fs-sm, fw-defualt);
+
+                span {
+                    font-size: map-get($fonts, fs-md);
+                    margin-left: 8px;
+                }
+            }
+
+            .btn_short {
+                background: #FFFFFF;
+                color: map-get($colors ,dark);
+            }
+        }
+}
+
+     table {
+         display: table;
+         width: 100%;
+        
+         thead {
+             display: none;
+         }
+     }
+
+ table tbody tr {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 16px;
+
+     td {
+         @include size_color(dark, fs-xsm,fw-defualt);
+
+         &:nth-child(5) {
+             @include size_color(dark, fs-sm,fw-lg);
+         }
+     }
+
+     &:nth-child(odd) {
+         background-color: #F9F9F9;
+     } 
+ }
+
+//! Pages number
+.balance_section .pages_number {
+    cursor: pointer;
+    margin-top: 38px;
+    margin-bottom: 44px;
+
+    @include flex(space-evenly, center);
+
+    .direction_logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .pages {
+        @include flex($align: center);
+        @include flex_row(32px);
+        @include size_color(dark, fs-md,fw-defualt);
+
+         p:nth-child(3) {
+            background: map-get($colors,success);
+            color: #FFFFFF;
+            border-radius: 8px;
+            padding: 8px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    //? Section 
+    section {
+        width: 100%;
+        height: 100%;
+            
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 32px;
+        
+        & .profile_about {
+            display: block;
+            max-height: 100%;
+            width: 100%;
+            position: relative;
+            top: 0;
+            padding: 32px ;
+            z-index: 1;
+        }
+
+        .balance {
+            grid-column: 2/-1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    section .profile_about .profile_info {
+        @include flex_colum(32px);
+        @include flex(center);
+    
+       .profile_header{
+        @include flex_colum(12px);
+        
+            h5 {
+                margin-bottom: 0;
+            }
+            .image {
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+
+    section .profile_info .setup .info {
+        cursor: pointer;
+        
+    }
+    
+    
+
+    section .setup .info:nth-child(3) {
+        background-color: map-get($colors, success);
+        border-radius: 8px;
+
+        ion-icon,p {
+            color: map-get($colors,light);
+        }
+    }
+
+    //? Balance
+    .balance .balance_header {
+        @include flex_row();
+        @include flex(space-between, center);
+    }
+
+    .balance .balance_section {
+        @include flex_colum(16px);
+        margin-bottom: 72px;
+
+        .total_amount {
+            padding: 28px 40px;
+
+            p{
+                font-size: map-get($fonts,fs-lg);
+                
+                & span{
+                    font-size: map-get($fonts, fs-blg);
+                    font-weight: map-get($fonts, fw-lg);
+                }
+
+            }
+
+            .btn_short {
+                width: 144px;
+            }
+        }
+
+        .pages_number {
+            @include flex(center);
+            @include flex_row(32px);
+            width: 100%;
+        }
+    }
+
+    //? Table
+        table {
+            width: 100%;
+            height: 100%;
+        }
+
+
+    table thead {
+        display: table-header-group;
+        margin-bottom: 16px;
+        
+        tr {
+            width: 100%;
+        }
+
+        tr th {
+            text-align: left;
+            padding-bottom: 16px;
+            @include size_color(text2-color, fs-xsm, fw-defualt);
+        }
+    }
+
+    table tbody tr {
+        display: table-row;
+        width: 100%;
+
+        td {
+            padding: 18px 0;
+        }
+    }
+
+
+    
+}

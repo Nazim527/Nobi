@@ -1,0 +1,77 @@
+@import '../Helper/map';
+@import '../Helper/mixin';
+@import '../Components/btn';
+@import '../Components/list_inf';
+
+//! Acount
+.profile_about {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    padding: 0 16px;
+    width: 280px;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1000;
+    transition: .3s;
+    
+
+    .profile_info {
+        @include flex_colum(32px);
+
+        .profile_header {
+            height: 100%;
+
+            @include flex($align: center);
+            @include flex_row(16px);
+        }
+
+        .setup {
+            @include flex_colum(8px);
+            
+            ion-icon {
+                margin: 0;
+            }
+             .info:hover {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+//? JS
+.profile_about.active {
+    display: block;
+    max-height: 100vh;
+    height: 100vh;
+    padding-top: 30px;
+    margin-top: 8px;
+}
+
+.profile_about .profile_header h5 {
+    display: block;
+    @include size_color(dark, fs-sm, fw-lg);
+    margin-bottom: 4px;
+}
+
+.profile_about .profile_header .account_info {
+    height: 100%;
+    p, .hight_line, ion-icon {
+        display: inline-block;
+        margin: 0;
+
+        @include size_color(dark, fs-sm, fw-defualt);
+    }
+
+    > p {
+        transform: translateY(-2px);
+    }
+
+    .hight_line {
+        height: 12px;
+        width: 1px;
+        background-color: #E0E0E0;
+        margin: 0 8px;
+    }
+}

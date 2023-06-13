@@ -1,0 +1,294 @@
+@import '../Helper/map';
+@import '../Helper/mixin';
+@import '../Components/btn';
+@import '../Components/list_inf';
+@import '../Components/header'; //! Header
+@import '../Components/accoount'; 
+@import '../Components/footer'; //!Footer;
+
+//! Direction Section
+
+.direction {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+
+    @include flex_colum();
+    
+    //? Page Direction
+    .page_direction ul{
+        @include flex_row();
+        cursor: pointer;
+
+    
+        li {
+            @include size_color(text2-color, fs-xsm,fw-defualt);
+            @include flex($align: center);
+            transition: all .3s ease;
+
+            &:last-child {
+                color: map-get($colors,dark );
+            }
+            &:hover:not(:last-child) {
+                color: map-get($colors,success-hover);
+            }
+        }
+    }
+
+    .direction_profile {
+        margin: 36px 0;
+    
+        .direction_info {
+            height: 100%;
+
+            @include flex($align: center);
+            @include flex_row(24px);
+        }
+
+    }
+}
+
+//?Profile info
+.direction_profile .direction_info {
+
+    .image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .account_info {
+
+        h5 {
+            display: block;
+            @include size_color(dark, fs-md, fw-lg);
+            margin-bottom: 4px;
+        }
+
+        p, .hight_line, ion-icon {
+            display: inline-block;
+            margin: 0;
+    
+            @include size_color(dark, fs-sm, fw-defualt);
+        }
+
+        .hight_line {
+            height: 20px;
+            width: 1px;
+            background-color: #E0E0E0;
+            margin: 0 8px;
+        }
+
+        > p {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+//! About section
+
+.about {
+    @include flex_colum(28px);
+    margin-bottom: 72px;
+
+    .about_header {
+        @include flex_row(64px);
+        border-bottom: 1px solid map-get($colors,line-color);
+        height: 46px;
+    }
+
+    .about_section {
+        @include flex_colum(24px)
+    }
+
+    .social {
+        @include flex_colum(32px)
+    }
+}
+
+.about_header a {
+    @include size_color(text2-color, fs-sm, fw-lg);
+
+    &:nth-child(2) {
+        position: relative;
+        color: map-get($colors,success);
+    }
+    &:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 48px;
+        height: 2px;
+        background-color: map-get($colors,success);
+    }
+}
+
+//?Biogrophy
+.about_section .biogrophy {
+    border-bottom: 1px solid map-get($colors,line-color);
+    h4 {
+        @include size_color(dark, fs-sm, fw-lg);
+    }
+    p {
+        @include size_color(dark,fs-xsm,fw-defualt);
+        margin: 20px 0;
+    }
+}
+
+//? Cerificates
+.about_section .certificate {
+    
+    @include flex_colum();
+
+    h4 {
+        @include size_color(dark, fs-sm, fw-lg);
+        margin-bottom: 32px;
+    }
+
+    .all_certificate {
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid map-get($colors,line-color );
+
+        @include flex_row(16px);
+
+        .image {
+            width: 116px;
+            height: 65px;
+            
+            img {
+                object-fit: cover;
+            }
+        }
+        
+        .certifacate_name {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.certificate .all_certificate .certifacate_name {
+    @include flex_colum(8px);
+    @include flex(center);
+
+    h5 {
+        @include size_color(dark, fs-sm, fw-lg);
+    }
+    a {
+        white-space: nowrap;
+        font-size: 1rem;
+        color: map-get($colors,primary);
+    }
+}
+
+//? Social
+.certificate .all_certificate:last-child {
+    margin: 0;
+}
+
+.about .social {
+    @include flex_colum(32px);
+
+    .link {
+        width: 136px;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        padding: 14px 16px;
+
+        @include flex_row(8px);
+        @include flex($align: center);
+
+        ion-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    //?Location
+    .location {
+        padding: 24px 0 0 24px;
+        background-color: #F8F8F8;
+        width: 100%;
+        height: 126px;
+        border-radius: 8px;
+        
+        > p {
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .info {
+            padding: 0;
+            gap: 13px;
+        }
+    }
+}
+
+
+//! Media For Desktop 
+@media screen and (min-width:1200px) {
+
+    //! Direction
+    .direction .direction_profile {
+        @include flex(center);
+
+        .direction_info {
+            gap: 32px;
+            .image {
+                width: 104px;
+                height: 104px;
+            }
+        }
+
+        .direction_info .account_info {
+            h5 {
+                font-size: map-get($fonts, fs-blg);
+            }
+            p {
+                font-size: map-get($fonts, fs-md);
+            }
+        }
+    }
+
+    //!About 
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 136px;
+        row-gap: 57px;
+        margin-bottom: 160px;
+
+        .about_header {
+            grid-column: 1/-1;
+        }
+    }
+
+    
+    .about .about_section {
+        gap: 30px;
+        
+        h4 {
+            font-size: map-get($fonts,fs-md);
+        }
+
+        //? Biogrophy
+        .biogrophy  p {
+            @include size_color(text-color,fs-sm);
+            line-height: 1.6;
+        }
+
+        //? Certificates
+        .certificate .all_certificate {
+            .image {
+                width: 187px;
+                height: 106px;
+            }
+        }
+    }
+
+    .about .social .location {
+        width: 384px;
+    }
+    
+}
