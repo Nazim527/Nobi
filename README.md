@@ -2,7 +2,7 @@ Hello! Today, I have prepared the "Nobi" website and developed my skills further
 ------------------------------------------------------------------------------------------------------
 Note: I am continuing to work on the complete version of the project as days go by and will share it soon.
 ------------------------------------------------------------------------------------------------------
-Live Demo: [nobi-master.netlify.app](https://master--nobi-master.netlify.app/);
+### Live Demo: [nobi-master.netlify.app](https://master--nobi-master.netlify.app/);
 
 Page 1:![Ekran görüntüsü 2023-06-23 022717](https://github.com/Nazim527/Nobi/assets/68445690/43674579-9c00-4cf9-99ab-12222f179efa)
 ------------------------------------------------------------------------------------------------------
