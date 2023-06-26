@@ -4,6 +4,7 @@
 .info {
     padding: 12px 24px;
     cursor: pointer;
+    white-space: nowrap;
 
     @include flex($align: center);
     @include flex_row(16px);
@@ -12,6 +13,11 @@
 
     &:hover{
         margin-left: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: map-get($colors, dark )
     }
 }
 

@@ -25,6 +25,7 @@
 .info {
   padding: 12px 24px;
   cursor: pointer;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,6 +46,10 @@
 }
 .info:hover {
   margin-left: 15px;
+}
+.info a {
+  text-decoration: none;
+  color: #1A1D1C;
 }
 
 .profile_about .setup ion-icon {
@@ -80,6 +85,7 @@
 .info {
   padding: 12px 24px;
   cursor: pointer;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,6 +106,10 @@
 }
 .info:hover {
   margin-left: 15px;
+}
+.info a {
+  text-decoration: none;
+  color: #1A1D1C;
 }
 
 .profile_about .setup ion-icon {
@@ -135,6 +145,7 @@
 .info {
   padding: 12px 24px;
   cursor: pointer;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,6 +166,10 @@
 }
 .info:hover {
   margin-left: 15px;
+}
+.info a {
+  text-decoration: none;
+  color: #1A1D1C;
 }
 
 .profile_about .setup ion-icon {
@@ -282,6 +297,7 @@
 .info {
   padding: 12px 24px;
   cursor: pointer;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,6 +318,10 @@
 }
 .info:hover {
   margin-left: 15px;
+}
+.info a {
+  text-decoration: none;
+  color: #1A1D1C;
 }
 
 .profile_about .setup ion-icon {
@@ -572,6 +592,7 @@ header .header_right .image {
 .info {
   padding: 12px 24px;
   cursor: pointer;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,6 +613,10 @@ header .header_right .image {
 }
 .info:hover {
   margin-left: 15px;
+}
+.info a {
+  text-decoration: none;
+  color: #1A1D1C;
 }
 
 .profile_about .setup ion-icon {
