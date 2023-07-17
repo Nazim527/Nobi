@@ -6,78 +6,152 @@
 @import '../Components/accoount'; 
 @import '../Components/footer'; //!Footer
 
+//!Header
+header {
+    margin-bottom: 0;
+}
+
+
+//!Page_content
 .page_content {
     width: 100%;
-    padding-top: 66px;
-
-    @include flex_colum(80px);
 
     .page_content_header {
-        width: 100%;    
-
-        @include flex_row(298px);
-    }
-    
-}
-
-//! Page Header Left
-.page_header_left {
-    width: 40%;
-    @include flex_colum(32px);
-
-    h1 {
-        @include size_color(dark, fs-Xblg, fw-lg)
-    }
-    p {
-        @include size_color(dark, fs-sm, fw-defualt)
-    }
-    .btn_short {
-        color: #fff;
-        background-color: map-get($colors, success);
+        display: none;
     }
 }
 
-
-.page_header_right  {
-    position: relative;
+.page_content_footer {
+    width: 100%;
     
-    .page_card {
-        width: 100%;
-        background-color: #F2F2F2;
-        border-radius: 16px;
-        padding: 8px 8px 0 8px;
+    @include flex_colum(8px);
+    
+    ul {
+        padding: 12px 0;
+        overflow-x: scroll;
 
-        .image {
-            display: block;
-            width: 264px;
-            height: 284px;
-        }
+        @include flex_row(4px);
 
-        .btn_card {
-            padding: 16px 0;
-            @include flex(center);
+        li {
+            padding: 6px 12px;
             
-            .btn_short {
-                color: map-get($colors, dark );
-                background-color: #E0E0E0;
-                border-radius: 8px;
-                border: none;
+            a {
+                color: map-get($colors,  nav_bar_text);
             }
         }
+        .active {
+            background-color: #F2F2F2;
+            border-radius: 6px;
+        }
+    }
+
+    .filter button{
+        padding: 10px 16px;
+        outline: none; border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        @include flex_row(16px);
+        .svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+
+
+
+
+
+//! Media for Desktop
+@media screen and  (min-width: 1200px) {
+    .page_content {
+        padding-top: 66px;
+    
+        @include flex_colum(80px);
+    
+        .page_content_header {
+            width: 100%;    
+    
+            @include flex_row(298px);
+        }
+        
     }
     
-    .card_bubble_1 {
-        width: 104px;
-        height: 104px;
-        position: absolute;
-        left: 360px;
-        bottom: 10px;
+    //! Page Header Left
+    .page_header_left {
+        width: 40%;
+        @include flex_colum(32px);
+    
+        h1 {
+            @include size_color(dark, fs-Xblg, fw-lg)
+        }
+        p {
+            @include size_color(dark, fs-sm, fw-defualt)
+        }
+        .btn_short {
+            color: #fff;
+            background-color: map-get($colors, success);
+        }
     }
-    .card_bubble_2 {
-        width: 72px;
-        height: 72px;
-        position: absolute;
-        left: 310px;
-        top: 10px;
+    
+    
+    .page_header_right  {
+        position: relative;
+        
+        .page_card {
+            width: 100%;
+            background-color: #F2F2F2;
+            border-radius: 16px;
+            padding: 8px 8px 0 8px;
+    
+            .image {
+                display: block;
+                width: 264px;
+                height: 284px;
+            }
+    
+            .btn_card {
+                padding: 16px 0;
+                @include flex(center);
+                
+                .btn_short {
+                    color: map-get($colors, dark );
+                    background-color: #E0E0E0;
+                    border-radius: 8px;
+                    border: none;
+                }
+            }
+        }
+        
+        .card_bubble_1 {
+            width: 104px;
+            height: 104px;
+            position: absolute;
+            left: 360px;
+            bottom: 10px;
+        }
+        .card_bubble_2 {
+            width: 72px;
+            height: 72px;
+            position: absolute;
+            left: 310px;
+            top: 10px;
+        }
+    }
+
+    //! Page content footer
+    .page_content_footer {
+        padding: 28px 0;
+        border-top: 1px solid #dcdcdc;
+
+        @include flex_row();
+        @include flex(space-between, center);
+        ul {
+            overflow: hidden;
+
+            @include flex_row(8px)
+        }
     }
 }
